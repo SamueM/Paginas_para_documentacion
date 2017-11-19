@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    /* Vamos a tener una cabecera fixed top */
+    /* Con ese padding el elemento posterior quedara debajo. */
+    padding-top: 95px;
+    font-family: lato,sans-serif;
+}
+header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color:#062f3c ;
+    display: flex;
+    justify-content: space-around;
+}
+article{
+    box-shadow:0px 2px 7px rgba(0,0,0,0.7);
+    width: 80%;
+    margin:20px auto;
+    padding: 1rem;
+    max-width: 1000px;
+}
+h1 {
+    border-bottom: solid #062f3c 2px;
+}
+a {
+    color:white;
+    text-decoration: none;
+}
+nav > a > i { padding-right: 1rem; }
+.logo > h2 > a > i{ padding-right: 1rem; }
+h2 {
+    margin: 1rem 0;
+}
+.colapse {
+    display: none;
+}
+nav > * {
+    display: inline-block;
+    padding: 1.7rem;
+}
+nav > a:hover {
+    background-color: white ;
+    color:#062f3c;  
+}
+@media screen and (max-width:900px){
+    nav { display: none;}
+    .colapse {
+        display: block;
+        margin: 1rem;
+        padding:0.7rem;
+    }
+    .colapse:hover {
+        background-color: white ;
+        color:#062f3c; 
+        border-radius: 50px;
+    }
+    header { display: block;}
+    .logo { display: flex; justify-content: space-around;}
+}
+@media screen and (min-width:900px){
+    .colapse {
+        display: none;
+    }
+    nav { display: block;}
+    header {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+/* Animaciones del menu */
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+/* Animaciones del menu */
